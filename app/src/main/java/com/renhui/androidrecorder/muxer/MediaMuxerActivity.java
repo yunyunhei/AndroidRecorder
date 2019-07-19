@@ -104,7 +104,7 @@ public class MediaMuxerActivity extends AppCompatActivity implements SurfaceHold
      * 打开摄像头
      */
     private void startCamera() {
-        camera = Camera.open(Camera.CameraInfo.CAMERA_FACING_FRONT);
+        camera = Camera.open(Camera.CameraInfo.CAMERA_FACING_BACK);
         camera.setDisplayOrientation(90);
         Camera.Parameters parameters = camera.getParameters();
         parameters.setPreviewFormat(ImageFormat.NV21);

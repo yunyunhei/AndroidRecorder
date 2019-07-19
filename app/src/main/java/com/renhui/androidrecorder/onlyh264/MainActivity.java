@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
         Log.w("MainActivity", "enter surfaceCreated method");
         // 目前设定的是，当surface创建后，就打开摄像头开始预览
-        camera = Camera.open();
+        camera = Camera.open(Camera.CameraInfo.CAMERA_FACING_BACK);
         camera.setDisplayOrientation(90);
         Camera.Parameters parameters = camera.getParameters();
         parameters.setPreviewFormat(ImageFormat.NV21);
